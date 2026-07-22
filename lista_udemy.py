@@ -1,20 +1,31 @@
 import os
 lista = []
 
+print('Administrar cardapio')
 while True:
-    print('Administrar cardapio')
-    opcao = input('Digite a primeira letra para inserir, apagar, listar' )
+    
+    opcao = input('Digite a primeira letra para inserir, apagar, listar:'  )
 
     if opcao == 'i':
         os.system('cls')
+        print('Escreva o nome da nova comida')
         valor = input('Valor: ')
+        
         lista.append(valor)
        
     elif opcao =='a': 
+       
         indice_str = input('Escolha o índice para apagar')
-        indice = int(indice_str)
-        del lista[indice]
-        print('a')
+    
+        try:
+            indice = int(indice_str)
+            del lista[indice]
+        except ValueError:    
+            print('Não foi possível apagar esse índice')
+        except IndexError:   
+                print('Índice não existe na lista')
+        except Exception:
+            print('Erro desconhecido')        
        
     elif opcao == 'l':
         os.system('cls')
