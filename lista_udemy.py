@@ -9,7 +9,7 @@ while True:
     if opcao == 'i':
         os.system('cls')
         print('Escreva o nome da nova comida')
-        valor = input('Valor: ')
+        valor = input('Nome: ')
         
         lista.append(valor)
        
