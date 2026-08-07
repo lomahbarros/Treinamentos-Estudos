@@ -1,17 +1,16 @@
-# Calculadora 
+# Calculadora da Aloma
 
-num_1 = input("Digite o primeiro número ")
+try:
+    num_1 = int(input("Digite o primeiro número "))
+    num_2 = int(input("Digite o segundo número "))
 
-num_2 = input("Digite o segundo número ")
-
-if type(num_1) != int or type(num_2) != int:
+except ValueError:
     print("Você não digitou um número inteiro")
+    exit()
 
 operacao = input('Qual operação você quer fazer? Para adição digite [+], para subtração digite[-], para multiplicação digite [*]'
 'para divisão digite [/]')
 
-num_1 == int(num_1)
-num_2 == int(num_2)
 
 
 if operacao == "+" :
@@ -20,7 +19,10 @@ elif operacao == "-":
     print(num_1 - num_2)
 elif operacao == "*":
     print(num_1 * num_2)
-elif operacao == "/":
-    print(num_1 / num_2)            
+elif operacao == "/":    
+    if num_1 == 0:  
+        print(f"Impossível dividir Zero por {num_2}")
+    else:
+        print(num_1 / num_2)          
 else:
     print("Você não digitou um operador matemático")
