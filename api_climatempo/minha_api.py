@@ -1,7 +1,7 @@
 import requests
 
 # projeto com api aloma
-API_KEY = "9bf7a05caa2d1eebc8f72ace157554a2"
+API_KEY = "9bf7a05caa2d1eebc8f72ace157554a2" #CHave não é ativa, inserir a chave ativa para funcionar.
 cidade = "São paulo"
 url = f"http://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={API_KEY}&units=metric&lang=pt_br"
 
