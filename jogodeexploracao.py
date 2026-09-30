@@ -1,9 +1,11 @@
+
+
 # Crie uma Lista de Salas:
 salas = ["sala01", "sala02", "sala03", "sala04", "sala05", "sala06", "sala07", ]
 
 # Defina uma lista para armazenar os nomes das salas dos calabouços.
 nomes_das_salas = ["Poco dos desejos", "Tavena sem portas",  "Abismo das Sombras", "Cripta dos Suplícios", "Galeria dos Ossos", "Enclave da Perdição", "Poço da Penumbra"]
-descricao_das_salas = []
+descricao_das_salas = ["Possui um lago de lama", "Paredes húmidas e revestidas por pedras", "Possui um fosse silencioso", "possui o ambiente frio com vozes das paredes", "Toda a sala e revestida de ossos", "Senssação constante de esta sendo observado", "Possui um fosse silencioso"]
 
 # Inicie outra lista, vazia por agora, para representar as salas visitadas.
 salas_visitadas = []
@@ -39,7 +41,10 @@ while True:
             
 print(f"RESUMO DA EXPLORAÇÃO\n A Salas vistadas foram {salas_visitadas}")
 
-  
+for nome,descricao in zip(nomes_das_salas, descricao_das_salas):
+    print(nome,descricao)
+
+
 
 
 
