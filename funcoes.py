@@ -18,7 +18,7 @@ def criar_botoes_iniciais():
     return botoes
 
 
-def espalhar_imagem_nivel_facil():
+def espalhar_imagem_nivel_facil(): # criada para espalhar as imagens das frutas, deixei de usar pq vou espalhar o fundo junto com a fruta
     x_inicial = 63
     y_inicial = 63
     tamanho_do_fundo = 138

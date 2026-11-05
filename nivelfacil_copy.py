@@ -1,20 +1,23 @@
 import pygame
 import sys
-from funcoes import espalhar_imagem_nivel_facil
-from embaralhar import espalhar_cartas_frutas
 from carregar_todas_imagens import carregar_imagens
+from embaralhar import  espalhar_cartas_baralho
+
 
 
 def telanivel_facil():
-    global matriz_cartas, matriz_cartas_frutas
+    global  matriz_cartas_frutas, lista_frutas
     pygame.init()
-    matriz_cartas = espalhar_imagem_nivel_facil() # Chama a função para espalhar as cartas
-    matriz_cartas_frutas = espalhar_cartas_frutas()
-
+    # matriz_cartas = espalhar_imagem_nivel_facil() # Chama a função para espalhar as cartas deixou de existir no codigo pois somente espalhava as frutas e preciso espalhar o fundo e as frutas
+    
+   
     # Criar janela
     largura, altura = 867,867
-    tela = pygame.display.set_mode((largura,altura))
+    tela = pygame.display.set_mode((largura, altura))
     pygame.display.set_caption("Aloma Jogo tela")
+
+    lista_frutas = carregar_imagens("frutas") # receber as imagens
+    matriz_cartas_frutas =  espalhar_cartas_baralho(lista_frutas) #chama as cartas embaralhadas
 
   
     preto = (0,0,0)  #Cores 
@@ -38,7 +41,7 @@ def telanivel_facil():
         #         tela.blit(fundo, carta)
         # pygame.display.flip()
 
-        for linha in matriz4_4frutas: #Esse loop mostra a carta embaralhada e o fundo da foto fundo
+        for linha in matriz_cartas_frutas: #Esse loop mostra a carta embaralhada e o fundo da foto fundo
             for carta in linha:
                 if carta["aberta"]:
                     img = pygame.image.load(carta["imagem"])
